@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>91_pseudo before,after</title>
+    <style>
+        #div p {float: left;}
+        #div1::before {display: block;
+                        content:"inserted before";}
+
+         #div1::after{content:"";
+                      clear:both;
+                      display:table;  }               
+    </style>
+</head>
+<body>
+    <div id ="div1">
+        <p>This is a floating text.</p>
+    </div>
+</body>
+</html>

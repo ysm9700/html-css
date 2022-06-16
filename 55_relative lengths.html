@@ -1,0 +1,53 @@
+<!--
+상대 길이 단위 :어떤 기준이 정해지고 몇배,몇퍼센트로 나타낸다.
+%:상위 요소의 길이에 대한 비율
+em:현재의 폰트 크기 (font-size)에 대한 비율,폰트의 크기를 기준으로 몇 배냐를 지정, 1em:100% 예를 들어 내가 표시하고 있는 픽셀이 16픽셀이라고 하면은 1em이라고 
+하는 것은 16픽셀과 같이 간다.현재 지정하고 있는 폰트의 크기에 따라서 넓이와 높이를 지정한다.
+ rem:최상위(html) 요소의 폰트 크기 (font-size)에 대한 비율,1rem:100%, r은 루트를 의미한다. Html에 지정되어 있는 태그에 폰트의 사이즈가 16픽셀이라고 하면은 
+ 어디서 rem이라는 단위를 쓰는것은 상관없이 rem은 16픽셀이라는 값이 나오게 된다.내가 어딘가 테이블 밖에 있든 상관없이 최상의 요소의 폰트 크기에 따라서 넓이를 지정할
+ 수 있다.
+
+
+
+<style>
+    html {font-size: 16px;}
+    p    {border:1px solid;
+         font-size:2em;
+           width:20%;}
+     #b1 {font-size:2em;}
+     #b2 {font-size:2rem;}
+     </style>
+ html {font-size: 16px;} html안에 모든 글자들의 폰트가 16픽셀로 지정이 된다.
+  p    {border:1px solid; font-size:2em;width:20%;}  p에 폰트 사이즈를 2em으로 줬다.내가 현제 표시하고 있는 폰트의 2배로 표시 됐다.
+
+<body>
+    Mom,
+    <p>I'm<b id="b1">NOT</b> a kid.</p>
+    <p>Yes you<b id="b2">ARE.</b></p>
+</body>
+mom은 16픽셀이 지정이 됐다.
+<p>I'm<b id="b1">NOT</b> a kid.</p>  총 4배의 폰트 크기가 된다. NOT이라는 글자가 2배가 됐는데  또 2배를 해서 4배가 됐다.
+ <p>Yes you<b id="b2">ARE.</b></p>   내가 속해 있는 최상위 2배 루트이니깐 32픽셀로 되어 있다. 2rem은 내가 있는 곳과 상관없이 루트에 대해서 2배이니깐 Yes you똑같은 
+ 폰트 처리만 한다.
+-->
+ 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>55_relative lenghs</title>
+  <style>
+   html {font-size: 16px;}
+   p    {border:1px solid;
+        font-size:2em;
+          width:30%}
+    #b1 {font-size:2em;}
+    #b2 {font-size:2rem;}
+    </style>
+</head>
+<body>
+    Mom,
+    <p>I'm<b id="b1"> NOT</b> a kid.</p>
+    <p>Yes you<b id="b2"> ARE.</b></p>
+</body>
+</html>

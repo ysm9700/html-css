@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>80_clearfix,after</title>
+   <style>
+    div {border: 1px solid;}
+    img {float:left;}
+    .clearfix::after{
+        content: "";
+        clear:both;
+        display:table;
+    }
+   </style>
+
+</head>
+<body>
+    <div class="clearfix">
+        <img src="C:\Users\연상민\Desktop\웹페이지\1000+웹프로그래밍+기초\1180_01_float.jpg"
+        width="100px">
+        1st Line<br>2nd Line
+        </div>
+        <div>
+            Next DIV!
+        </div>
+</body>
+</html>

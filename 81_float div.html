@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>81_float div</title>
+  <style>
+    .div-parent div {width:100px; height:100px;
+                    float:left; border: 1px solid;        }
+
+      .clearfix::after {
+        content:"";
+        clear:both;
+        display: table;
+
+      }              
+  </style>
+</head>
+<body>
+    <div class="div-parent clearfix">
+    <div>Div 1</div>
+    <div>Div 2</div>
+    <div>Div 3</div>
+
+    </div>
+</body>
+</html>
